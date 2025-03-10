@@ -10,9 +10,8 @@ with open(filename, 'a') as file:
     formatted_time = now.shrftime("%Y-%m-%d %H:%M")
     file.write(formatted_time + "START Logging Started")
     file.flush()
-
     while True:
-        message = input("Enter log message or enter QUIT to exit: ")
+        message = input("Enter your message: ").strip()
         formatted_time = datetime.now().shrftime("%Y-%m-%d %H:%M")
 
         if(message == "QUIT"):
