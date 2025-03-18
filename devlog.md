@@ -11,3 +11,4 @@ So far, I understand how the project is supposed to run. Main file which makes s
 
 1:40 PM, 3/11/2025
 I got a better understanding of the flow between the driver file to the encryption and logger. I need to rechange the scheme in driver and encryption to better send instructions from driver to those subprocesses. My goal is to setup the connection between the logger and the driver properly this work session.
+Work Session ended at 2:15 3/11/2025
