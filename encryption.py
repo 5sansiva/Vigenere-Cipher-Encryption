@@ -11,11 +11,11 @@ def encrypt(plaintext, passkey):
         encrypt_text += new_char
     return encrypt_text
 
-def decrypt(plaintext, passkey):
+def decrypt(cipherText, passkey):
     decrypt_text = ""
-    for i in range(len(plaintext)):
+    for i in range(len(cipherText)):
         shift = ord(passkey[i % len(passkey)]) - ord('A')
-        new_char = chr(((ord(plaintext[i]) - ord('A') - shift) % 26) + ord('A'))
+        new_char = chr(((ord(cipherText[i]) - ord('A') - shift) % 26) + ord('A'))
         decrypt_text += new_char
 
     return decrypt_text
