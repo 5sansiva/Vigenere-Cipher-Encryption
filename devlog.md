@@ -23,9 +23,13 @@ I got a better understanding of the flow between the driver file to the encrypti
 Work Session ended at 2:15 3/11/2025
 I wasn't able to get much done this work session, mainly because my environment was rather loud and I had a lot of distractions, so I decided to get work done later, which is why this session wasn't very productive. My next session, I plan to finish the goals I had previously set in my last session.
 
-3:09 3/18/2025
+3:09 pm 3/18/2025
 Current thoughts - Nothing new so far, I have not touched the project in some days but I have a clearer idea on what I have to do, and the flow of my project from the driver file to the other two files that are present.
 Current session goals - This session, I plan to fix the flow between the files, something that I wasn't able to finish during my last sesssion, so I want to make sure the driver calls the encryption and the logger with proper subprocesses and set those up properly.
 
-8:03 3/18/2025
+8:03 pm 3/18/2025
 Session Reflection: So I managed to finish the driver file, and also adjust the connection between the driver and the encryption file and the logger file. I still need to tweak the logger file so that every action is logged better. I didn't encounter any new problems so that was good. I accomplished my goal for this session, so for next session, I want to make sure every connection and logic is sound, then test the code more and make sure it is working properly.
+
+3:56 pm 3/19/2025
+Current thoughts - Haven't had any new thoughts.
+Current session goals - I plan to do testing to see if my program works the way it is intented to. I originally did testing only for the encryption file to make sure the encrypt and decrypt methods were working properly and they were. I plan to really go through the project and ensure various test cases are working and that the project meets the instructions.
