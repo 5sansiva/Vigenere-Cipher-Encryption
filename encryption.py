@@ -22,7 +22,7 @@ def decrypt(cipherText, passkey):
 
 if __name__ == "__main__":  
     while True:
-        command_line = input("Input: ") 
+        command_line = input() 
         command_parts = command_line.split(maxsplit=1)
         
         if len(command_parts) == 0:
@@ -49,7 +49,7 @@ if __name__ == "__main__":
             if passkey:
                 if len(command_parts) > 1:
                     cipherText = command_parts[1]
-                    decrypted_text = decrypt(plaintext, passkey)
+                    decrypted_text = decrypt(cipherText, passkey)
                     print(f"RESULT {decrypted_text}")
             else:
                 print("ERROR Password not set")
