@@ -13,14 +13,14 @@ with open(filename, 'a') as file:
             
 
             if(message == "QUIT"):
-                formatted_time = datetime.now().shrftime("%Y-%m-%d %H:%M")
+                formatted_time = datetime.now().strftime("%Y-%m-%d %H:%M")
                 file.write(f"{formatted_time} [QUIT] Logging stopped")
                 break
             
             parts = message.split(' ', 1)
             action = parts[0]
 
-            formatted_time = datetime.now().shrftime("%Y-%m-%d %H:%M")
+            formatted_time = datetime.now().strftime("%Y-%m-%d %H:%M")
 
 
             if len(parts) > 1:

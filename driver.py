@@ -6,20 +6,22 @@ from subprocess import Popen, PIPE
 history = {} #Stores messages
 count = 0
 
-def log(logger_process, message):
-    loggerProcess.stdin.write(message + "\n")
-    loggerProcess.stdin.flush()
+def log(loggerProcess, message):
+        loggerProcess.stdin.write(message + "\n")
+        loggerProcess.stdin.flush()
 
 def search_history():
+    global count
     while True:
         print("\nHistory Menu:")
         for count, val in history.items():
             print(f"{count}. {val}")
-        print("Choose 0 to go back to menu")
+        print("Type 'back' to go back to menu")
         print("Type 'add' to input a new string to history")
 
         choice = input("Choose a number, type 'add', or 0 to go back: ").strip().lower()
-        if choice == 0:
+        
+        if choice == "back":
             print("Returning to menu")
             return None
         
@@ -27,7 +29,7 @@ def search_history():
             newString = input("Enter a new string: ")
             history[count + 1] = newString
             count += 1
-            print(f"New string '{newString}' added to history.")\
+            print(f"New string '{newString}' added to history.")
             return newString
 
         try:
@@ -40,15 +42,18 @@ def search_history():
             print("Invalid input. Please enter a valid number or command.")
 
 
+
 def main():
+    global count
     if len(sys.argv) != 2:
         print("Please upload the log file")
         sys.exit(1)
 
     log_file = sys.argv[1]
 
-    loggerProcess = subprocess.Popen(["python3", "logger.py", log_file], stdin=subprocess.PIPE, text=True)
-    encryptionProcess = subprocess.Popen(["python3", "encryption.py"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, text=True)
+    loggerProcess = Popen(["python", "logger.py", log_file], stdin=PIPE, text=True)
+    encryptionProcess = Popen(["python", "encryption.py"], stdin=PIPE, stdout=PIPE, text=True)
+    
     
     log(loggerProcess, "START Logging Started")
 
@@ -60,13 +65,13 @@ def main():
         print("4. History")
         print("5. Quit")
 
-        choice = input("Enter command choice: ").strip().lower()
+        choice = input("Enter command choice(Type out command): ").strip().lower()
 
         if choice == "password":
-            message = input("Use a string in history(1) or new string(2): ").strip()
+            message = input("Use a string in new string(1) or history(2): ").strip()
 
             
-            if message == "2":
+            if message == "1":
                 password = input("Enter a password: ")
                 if password.isalpha():
                     count += 1
@@ -75,13 +80,14 @@ def main():
                     encryptionProcess.stdin.write(f"PASS {password}\n")
                     encryptionProcess.stdin.flush()
                     result = encryptionProcess.stdout.readline().strip()
+                    print(result)
                     log(loggerProcess, "PASSWORD SET")
                     log(loggerProcess, result)
                 else:
                     print("Invalid input. Please enter a valid string(letters only).")
                 
-            elif message == "1":
-                if history:
+            elif message == "2":
+                if len(history) != 0:
                     password = search_history()
                     if password:
                         encryptionProcess.stdin.write(f"PASS {password}\n")
@@ -91,6 +97,8 @@ def main():
                         log(loggerProcess, result)
                     else:
                         print("Invalid history selection.")
+                else:
+                    print("History is empty. Please enter a new password")
 
 
         elif choice == "encrypt":
@@ -100,54 +108,64 @@ def main():
                 newString = input("Enter your new string: ")
 
                 if newString.isalpha():
-                    encryptionProcess.stdin.write(f"ENCRYPT {message}\n")
+                    encryptionProcess.stdin.write(f"ENCRYPT {newString.upper()}\n")
                     encryptionProcess.stdin.flush()
                     result = encryptionProcess.stdout.readline().strip()
                     print(result)
-                    log(loggerProcess, f"ECRYPT {message}")
+                    log(loggerProcess, f"ENCRYPT {newString}")
                     log(loggerProcess, result)
                     if result.startswith("RESULT"):
+                        result = result.split(" ", 1)[1]
                         count += 1
-                        history[count] = message
+                        history[count] = result
                 else:
                     print("Invalid input. Please enter a valid string(letters only).")
 
             elif message == "2":
                 val = search_history()
-                encryptionProcess.stdin.write(f"ENCRYPT {message}\n")
+                encryptionProcess.stdin.write(f"ENCRYPT {val.upper()}\n")
                 encryptionProcess.stdin.flush()
                 result = encryptionProcess.stdout.readline().strip()
                 print(result)
-                log(loggerProcess, f"ECRYPT {message}")
+                log(loggerProcess, f"ENCRYPT {val}")
                 log(loggerProcess, result)
-                
+                if result.startswith("RESULT"):
+                    result = result.split(" ", 1)[1]
+                    count += 1
+                    history[count] = result
         
         
         
         elif choice == "decrypt":
-            message = input("Choose a string in new string(1) or history(2): ").strip()
+            newString = input("Choose a string in new string(1) or history(2): ").strip()
 
             if message == "1":
                 newString = input("Enter your new string: ")
                 if newString.isalpha():
-                    encryptionProcess.stdin.write(f"DECRYPT {message}\n")
+                    encryptionProcess.stdin.write(f"DECRYPT {newString.upper()}\n")
                     encryptionProcess.stdin.flush()
                     result = encryptionProcess.stdout.readline().strip()
                     print(result)
-                    log(loggerProcess, f"DECRYPT {message}")
+                    log(loggerProcess, f"DECRYPT {newString}")
                     log(loggerProcess, result)
                     if result.startswith("RESULT"):
-                        history[count + 1] = message
+                        result = result.split(" ", 1)[1]
+                        count += 1
+                        history[count] = result
                 else:
                     print("Invalid input. Please enter a valid string(letters only).")
             elif message == "2":
                 val = search_history()
-                encryptionProcess.stdin.write(f"DECRYPT {message}\n")
+                encryptionProcess.stdin.write(f"DECRYPT {val.upper()}\n")
                 encryptionProcess.stdin.flush()
                 result = encryptionProcess.stdout.readline().strip()
                 print(result)
-                log(loggerProcess, f"DECRYPT {message}")
+                log(loggerProcess, f"DECRYPT {val}")
                 log(loggerProcess, result)
+                if result.startswith("RESULT"):
+                    result = result.split(" ", 1)[1]
+                    count += 1
+                    history[count] = result
 
         elif choice == "history":
             print("\nHistory")

@@ -33,3 +33,7 @@ Session Reflection: So I managed to finish the driver file, and also adjust the 
 3:56 pm 3/19/2025
 Current thoughts - Haven't had any new thoughts.
 Current session goals - I plan to do testing to see if my program works the way it is intented to. I originally did testing only for the encryption file to make sure the encrypt and decrypt methods were working properly and they were. I plan to really go through the project and ensure various test cases are working and that the project meets the instructions.
+
+6:30 3/19/2025
+Session reflection - I encounted some new problems, mainly the flow between the menus, or going from the seperate history menu back to the main menu, or the encrypted value and decrypted value not being stored in the result properly. I did accomplish part of my goal which was to do testing and see if my project runs so far and if there were any errors. Initially there were some minor error due to me calling the subprocess module directly along with certain type mismatches during input and such, but I managed to address those issues.
+Next session - I plan to further test out all the commands and essentially try as many combinations of passwords, encryptions, and decryptions along with further fixing the format the logger.py logs in.
