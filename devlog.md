@@ -41,3 +41,7 @@ Next session - I plan to further test out all the commands and essentially try a
 2:45 3/20/2025
 Current throughts - Haven't had any new thoughts when it comes to testing and such.
 Current session goals - I want to further check all the functionality of the project, and fix some formatting and test various passwords, encryptions, and decryptions. I will then also test it on the cs1 server to make sure my project is functioning properly.
+
+3:16 3/20/2025
+Session reflection - Identified two issues that I need to fix. I will do that after attending to another matter that I have which is why this session is cut short.
+Next session - I plan to fix the issues I identified and I will elaborate on those issues during my next log when I will say in more detail the issues that I found and that I needed to fix.

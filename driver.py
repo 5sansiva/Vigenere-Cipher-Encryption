@@ -16,6 +16,7 @@ def search_history():
         print("\nHistory Menu:")
         for count, val in history.items():
             print(f"{count}. {val}")
+        print("\n")
         print("Type 'back' to go back to menu")
         print("Type 'add' to input a new string to history")
 
@@ -137,7 +138,7 @@ def main():
         
         
         elif choice == "decrypt":
-            newString = input("Choose a string in new string(1) or history(2): ").strip()
+            message = input("Choose a string in new string(1) or history(2): ").strip()
 
             if message == "1":
                 newString = input("Enter your new string: ")

@@ -14,7 +14,7 @@ with open(filename, 'a') as file:
 
             if(message == "QUIT"):
                 formatted_time = datetime.now().strftime("%Y-%m-%d %H:%M")
-                file.write(f"{formatted_time} [QUIT] Logging stopped")
+                file.write(f"{formatted_time} [QUIT] Logging stopped\n")
                 break
             
             parts = message.split(' ', 1)
