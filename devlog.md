@@ -37,3 +37,7 @@ Current session goals - I plan to do testing to see if my program works the way 
 6:30 3/19/2025
 Session reflection - I encounted some new problems, mainly the flow between the menus, or going from the seperate history menu back to the main menu, or the encrypted value and decrypted value not being stored in the result properly. I did accomplish part of my goal which was to do testing and see if my project runs so far and if there were any errors. Initially there were some minor error due to me calling the subprocess module directly along with certain type mismatches during input and such, but I managed to address those issues.
 Next session - I plan to further test out all the commands and essentially try as many combinations of passwords, encryptions, and decryptions along with further fixing the format the logger.py logs in.
+
+2:45 3/20/2025
+Current throughts - Haven't had any new thoughts when it comes to testing and such.
+Current session goals - I want to further check all the functionality of the project, and fix some formatting and test various passwords, encryptions, and decryptions. I will then also test it on the cs1 server to make sure my project is functioning properly.
