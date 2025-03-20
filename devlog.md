@@ -45,3 +45,7 @@ Current session goals - I want to further check all the functionality of the pro
 3:16 3/20/2025
 Session reflection - Identified two issues that I need to fix. I will do that after attending to another matter that I have which is why this session is cut short.
 Next session - I plan to fix the issues I identified and I will elaborate on those issues during my next log when I will say in more detail the issues that I found and that I needed to fix.
+
+3:51 3/20/2025
+Current thoughts - Nothing new.
+Current session goals - I identified two new issues my last session related to how the user uses the program so I will fix those this session. Those issues are mainly the word RESULT not being printed when the password is set and the history menu displaying 0 to go back, when that shouldn't be there. I will fix those this session along with overall checking if everything is right.
