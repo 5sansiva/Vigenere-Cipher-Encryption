@@ -49,3 +49,7 @@ Next session - I plan to fix the issues I identified and I will elaborate on tho
 3:51 3/20/2025
 Current thoughts - Nothing new.
 Current session goals - I identified two new issues my last session related to how the user uses the program so I will fix those this session. Those issues are mainly the word RESULT not being printed when the password is set and the history menu displaying 0 to go back, when that shouldn't be there. I will fix those this session along with overall checking if everything is right.
+
+6:29 3/20/2025
+Session reflection- So when I ran it on the cs1 server, I encountered problems with the python version I have as I am using python version 3+ and the server has python version 2.7.5, so I had to change a lot of the commands I used, mainly the f" and replaced it with .format() or using sys.stdout.write for the encryption file, along with having to use raw_input() instead of input(), so I had to address those issues. Rerunning it on the server helped me find these issues, so those were the main problems. I was able to fix the UI issues that I had before that I wanted to fix at the start of my session so that was good. I am able to get my project running on the cs1 server so now I am able to do that which is great.
+Next session - I am close to finishing the project, I will probably run through all the menus and cases I have and recheck the instructions before submitting, and that will be my goal for next session.

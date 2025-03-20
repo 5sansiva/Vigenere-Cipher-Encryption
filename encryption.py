@@ -22,8 +22,9 @@ def decrypt(cipherText, passkey):
 
 if __name__ == "__main__":  
     while True:
-        command_line = input() 
-        command_parts = command_line.split(maxsplit=1)
+        command_line = raw_input()  
+        command_parts = command_line.split(' ', 1)
+
         
         if len(command_parts) == 0:
             continue  
@@ -32,31 +33,47 @@ if __name__ == "__main__":
         if(command == "PASS"):
             if len(command_parts) > 1:
                 passkey = command_parts[1].upper()
-                print("RESULT")
+                sys.stdout.write("RESULT\n")
+                sys.stdout.flush()
             else:
-                print("ERROR Password not set")
+                sys.stdout.write("ERROR Password not set\n")
+                sys.stdout.flush()
         
         elif(command == "ENCRYPT"):
             if passkey:
                 if len(command_parts) > 1:
                     plainText = command_parts[1]
+                    if not plainText.isalpha():
+                        sys.stdout.write("ERROR Only alphabetic characters allowed\n")
+                        sys.stdout.flush()
+                        continue
                     encrypted_text = encrypt(plainText, passkey)
-                    print(f"RESULT {encrypted_text}")
+                    sys.stdout.write("RESULT {}\n".format(encrypted_text))
+                    sys.stdout.flush()
             else:
-                print("ERROR Password not set")
+                sys.stdout.write("ERROR Password not set\n")
+                sys.stdout.flush()
         
         elif(command == "DECRYPT"):
             if passkey:
                 if len(command_parts) > 1:
                     cipherText = command_parts[1]
+                    if not cipherText.isalpha():
+                        sys.stdout.write("ERROR Only alphabetic characters allowed\n")
+                        sys.stdout.flush()
+                        continue
                     decrypted_text = decrypt(cipherText, passkey)
-                    print(f"RESULT {decrypted_text}")
+                    sys.stdout.write("RESULT {}\n".format(decrypted_text))
+                    sys.stdout.flush()
             else:
-                print("ERROR Password not set")
+                sys.stdout.write("ERROR Password not set\n")
+                sys.stdout.flush()
         
         elif command == "QUIT":
-            print("Program has exited")
+            sys.stdout.write("Program has exited\n")
+            sys.stdout.flush()
             break
         else:
-            print("Unknown command. Try again")
+            sys.stdout.write("Unknown command. Try again\n")
+            sys.stdout.flush()
 
