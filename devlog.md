@@ -57,3 +57,7 @@ Next session - I am close to finishing the project, I will probably run through 
 1:39 PM 3/21/2025
 Current thoughts - I realized that python3 works on the server.
 Current session goals - I am going to revert everything back so it can work on python3. I did not realize the UTD servers has python3 so I will change everything back. I will also just make sure everything works.
+
+1:48 PM 3/21/2025
+Session reflection - I think I am going to keep it as I do not know whether testing is going to be done on python or python3.
+Next session - I will double check everything and I will probably submit.
