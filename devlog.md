@@ -38,18 +38,22 @@ Current session goals - I plan to do testing to see if my program works the way 
 Session reflection - I encounted some new problems, mainly the flow between the menus, or going from the seperate history menu back to the main menu, or the encrypted value and decrypted value not being stored in the result properly. I did accomplish part of my goal which was to do testing and see if my project runs so far and if there were any errors. Initially there were some minor error due to me calling the subprocess module directly along with certain type mismatches during input and such, but I managed to address those issues.
 Next session - I plan to further test out all the commands and essentially try as many combinations of passwords, encryptions, and decryptions along with further fixing the format the logger.py logs in.
 
-2:45 3/20/2025
+2:45 PM 3/20/2025
 Current throughts - Haven't had any new thoughts when it comes to testing and such.
 Current session goals - I want to further check all the functionality of the project, and fix some formatting and test various passwords, encryptions, and decryptions. I will then also test it on the cs1 server to make sure my project is functioning properly.
 
-3:16 3/20/2025
+3:16 PM 3/20/2025
 Session reflection - Identified two issues that I need to fix. I will do that after attending to another matter that I have which is why this session is cut short.
 Next session - I plan to fix the issues I identified and I will elaborate on those issues during my next log when I will say in more detail the issues that I found and that I needed to fix.
 
-3:51 3/20/2025
+3:51 PM 3/20/2025
 Current thoughts - Nothing new.
 Current session goals - I identified two new issues my last session related to how the user uses the program so I will fix those this session. Those issues are mainly the word RESULT not being printed when the password is set and the history menu displaying 0 to go back, when that shouldn't be there. I will fix those this session along with overall checking if everything is right.
 
-6:29 3/20/2025
+6:29 PM 3/20/2025
 Session reflection- So when I ran it on the cs1 server, I encountered problems with the python version I have as I am using python version 3+ and the server has python version 2.7.5, so I had to change a lot of the commands I used, mainly the f" and replaced it with .format() or using sys.stdout.write for the encryption file, along with having to use raw_input() instead of input(), so I had to address those issues. Rerunning it on the server helped me find these issues, so those were the main problems. I was able to fix the UI issues that I had before that I wanted to fix at the start of my session so that was good. I am able to get my project running on the cs1 server so now I am able to do that which is great.
 Next session - I am close to finishing the project, I will probably run through all the menus and cases I have and recheck the instructions before submitting, and that will be my goal for next session.
+
+1:39 PM 3/21/2025
+Current thoughts - I realized that python3 works on the server.
+Current session goals - I am going to revert everything back so it can work on python3. I did not realize the UTD servers has python3 so I will change everything back. I will also just make sure everything works.
