@@ -65,3 +65,7 @@ Next session - I will double check everything and I will probably submit.
 1:35 PM 3/24/2025
 Current thoughts - I feel good about this project yet I want to make sure there are no errors that pop up.
 Current session goals - I will go through my entire project, check every possible user interaction so I can see the areas I need to change. These are minute tweaks so I do not think I should be worried and I can still get the project submitted by tonight.
+
+3:35 PM 3/24/2025
+Session reflection: I was able to edit some parts of my program when it comes to error handling and messages that needed to be displayed along with fixing some issues in my program including being able to go back to the main menu from the history menu. I also fixed how the program checks if history is empty or not and the appropriate errors that need to be displayed as such.
+Next session goals - I will probably double check all the requirements and submit the project.
