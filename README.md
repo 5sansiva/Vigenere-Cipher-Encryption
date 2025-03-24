@@ -13,9 +13,6 @@ The programs communicate via pipes using the `subprocess` module in Python.
 ---
 
 ## Setup
-
-Ensure you are running **Python 3.7** or higher (Python 2.7 is outdated and not supported).
-
 Install required packages with:
 ```
 pip install -r requirements.txt
