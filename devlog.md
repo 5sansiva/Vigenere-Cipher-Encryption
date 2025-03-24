@@ -61,3 +61,7 @@ Current session goals - I am going to revert everything back so it can work on p
 1:48 PM 3/21/2025
 Session reflection - I think I am going to keep it as I do not know whether testing is going to be done on python or python3.
 Next session - I will double check everything and I will probably submit.
+
+1:35 PM 3/24/2025
+Current thoughts - I feel good about this project yet I want to make sure there are no errors that pop up.
+Current session goals - I will go through my entire project, check every possible user interaction so I can see the areas I need to change. These are minute tweaks so I do not think I should be worried and I can still get the project submitted by tonight.
