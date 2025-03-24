@@ -96,8 +96,9 @@ def main():
                     print(result)
                     log(loggerProcess, "PASSWORD SET")
                     log(loggerProcess, result)
-                else:
-                    print("Invalid history selection.")
+            else:
+                print("Invalid input. Try again!")
+
                 
 
         elif choice == "encrypt":
@@ -136,8 +137,9 @@ def main():
                         result = result.split(" ", 1)[1]
                         count += 1
                         history[count] = result
-                else:
-                    print("Invalid selection or history empty. Returning to menu.")
+            else:
+                print("Invalid input. Try again!")
+                
                 
 
 
@@ -175,8 +177,9 @@ def main():
                         result = result.split(" ", 1)[1]
                         count += 1
                         history[count] = result
-                else:
-                    print("Invalid selection or history empty. Returning to menu.")
+            else:
+                print("Invalid input. Try again!")
+                
                 
 
         elif choice == "history":
@@ -206,6 +209,8 @@ def main():
 
             print("Program has ended. Good bye :)")
             break
+        else:
+            print("Invalid choice. Please enter a valid choice!")
 
 
 if __name__ == "__main__":
