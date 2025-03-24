@@ -63,24 +63,50 @@ Output: RESULT OIWWC
 
 **Driver Program:**
 ```
-Command: password
-New string or history? (n/h): n
-Enter passkey: HELLO
 
-Command: encrypt
-New string or history? (n/h): n
-Enter string: WORLD
-Result: RESULT DSFOE
+Menu:
+1. Password
+2. Encrypt
+3. Decrypt
+4. History
+5. Quit
+Enter command choice(Type out command): password
+Enter (1) to input a new string or (2) to choose from history: 2
 
-Command: history
-1. WORLD
+History Menu:
+History is empty. Please enter a new string.
 
-Command: decrypt
-New string or history? (n/h): h
-Select string (1): 1
-Result: RESULT WORLD
+Menu:
+1. Password
+2. Encrypt
+3. Decrypt
+4. History
+5. Quit
+Enter command choice(Type out command): 1
+Invalid choice. Please enter a valid choice!
 
-Command: quit
+Menu:
+1. Password
+2. Encrypt
+3. Decrypt
+4. History
+5. Quit
+Enter command choice(Type out command): password
+Enter (1) to input a new string or (2) to choose from history: 1
+Enter a password: hello
+RESULT
+
+Menu:
+1. Password
+2. Encrypt
+3. Decrypt
+4. History
+5. Quit
+Enter command choice(Type out command): quit
+Program has ended. Good bye :)
+
+
+
 ```
 
 ---
